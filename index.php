@@ -1,0 +1,697 @@
+<?php
+
+session_start();
+require_once 'path.php';
+require_once ROOT_PATH . '/vendor/autoload.php';
+require_once ROOT_PATH . '/app/controller.php';
+
+
+
+
+
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- OPEN GRAPH META TAGS -->
+  <meta property="og:title" content="Xparkling Touch Unisex Salon">
+  <meta property="og:description" content="Benin City's Favourite Salon">
+  <meta property="og:image" content="http://localhost/xpark/og-img.png">
+  <meta property="og:url" content="http://localhost/xpark">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Xparkling Touch Unisex Salon">
+  <!-- OTHER META TAGS -->
+  <meta name="description" content="Benin City's Favourite
+  Salon">
+  <meta name="keywords" content="xpark, xparkling, xparkling touch, xparkling touch uniisex salon, online salon, online barbers, online spa, xparkling touch spa">
+  <meta name="author" content="">
+  <link rel="canonical" href="http://localhost/xpark">
+  <link rel="icon" href="favicon.png">
+  <title>XPARKLING TOUCH UNISEX SALON</title>
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+  <!-- BOOTSTRAP CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- VANILLA CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- ICONS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- MONTSERRAT FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <!-- ANIMATE CSS -->
+  <link rel="stylesheet" href="assets/css/animate.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/><!-- 2 -->
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <!-- MOBILE NAV -->
+  <div class="mnav">
+    <div class="mclose closeMenu">
+      <i class="fa-solid fa-xmark"></i>
+    </div>
+    <div class="mnav-wrp">
+      <div class="mlogo">
+        <a href=""> 
+          <img src="assets/imgs/logo.png" alt="" class="img-fluid">
+        </a>
+      </div>
+      <div class="mnavlinks">
+        <li class=""><a href="#header">HOME</a></li>
+        <li class=""><a href="#about">ABOUT</a></li>
+        <li class=""><a href="#services">SERVICES</a></li>
+        <li class=""><a href="pricing">PRICING</a></li>
+        <li class=""><a href="#contact">CONTACT</a></li>
+      </div>
+    </div>
+  </div>
+  
+  <header id="header" style="background: url('assets/imgs/header-image.jpg')no-repeat center center/cover;">
+    <!-- NAVBAR -->
+    <nav class="xnav">
+      <div class="container">
+        <div class="xmain-nav">
+          <div class="xlogo">
+            <a href=""> 
+              <img src="assets/imgs/logo.png" alt="" class="img-fluid">
+            </a>
+          </div>
+          <div class="navlinks">
+            <li class="nvl"><a href="#header">HOME</a></li>
+            <li class="nvl"><a href="#about">ABOUT</a></li>
+            <li class="nvl"><a href="#services">SERVICES</a></li>
+            <li class="nvl"><a href="pricing">PRICING</a></li>
+            <li class="nvl"><a href="#contact">CONTACT</a></li>
+            <button class="xbutton">
+              <i class="fa-solid fa-bars toggle-menu"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- FIXED HIDDEN NAVBAR -->
+    <nav class="xnav xnav1 hidden xbg1 fixed-top wow fadeInDown">
+      <div class="container">
+        <div class="xmain-nav">
+          <div class="xlogo">
+            <a href=""> 
+              <img src="assets/imgs/logo.png" alt="" class="img-fluid">
+            </a>
+          </div>
+          <div class="navlinks">
+            <li class="nvl"><a href="#header">HOME</a></li>
+            <li class="nvl"><a href="#about">ABOUT</a></li>
+            <li class="nvl"><a href="#services">SERVICES</a></li>
+            <li class="nvl"><a href="pricing">PRICING</a></li>
+            <li class="nvl"><a href="#contact">CONTACT</a></li>
+            <button class="xbutton">
+              <i class="fa-solid fa-bars toggle-menu-2"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    
+    <!-- HERO -->
+    <div class="hero-msg">
+      <h3 class="mts-small wow fadeIn">STAY SHARP, LOOK GOOD</h3>
+      <p class="hero-tag kolak wow fadeInUp" data-wow-offset="20">
+        Benin City's Favourite <br>
+        Salon
+      </p>
+      <div class="hero-btn">
+        <a href="book-an-appointment/" class="xbtn mts-small">BOOK AN APPOINTMENT</a>
+      </div>
+      <a href="#about" class="scrl">
+        <div class="scroll-btn animate__animated animate__bounce animate__repeat-4 animate__delay-3 animate__slower">
+          <i class="fa-solid fa-arrow-down"></i>
+        </div>
+      </a>
+    </div>
+  </header>
+
+  <!-- ABOUT SECTION -->
+  <section id="about">
+    <div class="container">
+      <div class="main-section">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="mts-small xtxt1 wow fadeIn">SINCE 2024</div>
+            <h1 class="kolak xtxt1 wow fadeInUp">
+              Xparkling Touch Unisex <br>Salon
+            </h1>
+            <div class="about-writeup wow fadeIn">
+              Welcome to Xparkling Touch Unisex Salon, where style meets sophistication. Our expert stylists offer top-notch haircuts, color, and treatments for all. Experience the ultimate in hair care and beauty services in a chic, welcoming environment.
+            </div>
+            <div class="about-writeup mt-2 wow fadeIn">
+              Whether you're looking for a fresh cut or a bold new look, Xparkling Touch has you covered.
+            </div>
+            <ul class="about-writeup-list wow fadeIn">
+              <li><i class="fa-solid fa-check"></i> Personalized consultation to ensure unique style and preferences</li>
+              <li><i class="fa-solid fa-check"></i> Quality hair care products to ensure best results</li>
+              <li><i class="fa-solid fa-check"></i> Relaxing and rejuvenating experience in our modern, comfortable salon designed to make you feel pampered</li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <div class="row">
+              <div class="col-6">
+                <div class="about-img img-1 wow fadeInDown"></div>
+              </div>
+              <div class="col-6">
+                <div class="about-img img-2 wow fadeInUp"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- SECOND PART -->
+      <div class="about-sub-section">
+        <div class="row">
+          <div class="col-md-4 wow fadeInUp">
+            <!-- EACH SERVICE BOX -->
+            <div class="row">
+              <div class="col-3">
+                <img src="assets/imgs/icon-2.png" alt="" class="img-fluid">
+              </div>
+              <div class="col-9">
+                <h3 class="mts-small xtxt1">Barbing</h3>
+                <p>
+                  Professional haircuts and styles tailored to suit your unique look, ensuring precision, style, and the perfect finish for every individual.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 wow fadeInUp" data-wow-delay="0.2s">
+            <!-- EACH SERVICE BOX -->
+            <div class="row">
+              <div class="col-3">
+                <img src="assets/imgs/icon-1.png" alt="" class="img-fluid">
+              </div>
+              <div class="col-9">
+                <h3 class="mts-small xtxt1">Braiding</h3>
+                <p>
+                  Expertly crafted braiding styles that not only protect your hair but also enhance its natural beauty, offering durability and intricate designs.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 wow fadeInUp" data-wow-delay="0.3s">
+            <!-- EACH SERVICE BOX -->
+            <div class="row">
+              <div class="col-3">
+                <img src="assets/imgs/icon-3.png" alt="" class="img-fluid">
+              </div>
+              <div class="col-9">
+                <h3 class="mts-small xtxt1">Frontals</h3>
+                <p>
+                  Premium frontal installations that provide a seamless, natural hairline, blending effortlessly with your own hair for a flawless appearance.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pre-service" class="xbg1">
+    <div class="container">
+      <div class="pre-service-box">
+        <div class="pre-service-img wow bounceInLeft"></div>
+        <div class="pre-service-text wow fadeInRight" data-wow-delay="0.2s">
+          <p class="mts-small">
+            PROFESSIONALISM AT ITS PEAK
+          </p>
+          <p class="kolak">
+            Making people look <br>
+            awesome since the start
+          </p>
+          <p class="pre-text">
+            Making people look awesome since the start. Our passion is your beauty, and our commitment is your satisfaction. We strive to provide exceptional service and create a welcoming environment for all our clients.
+          </p>
+          <div class="row">
+            <div class="col-2">
+              <img src="assets/imgs/signature.svg" alt="" class="img-fluid">
+            </div>
+            <div class="col-10">
+              <p class="mts-small text-white">FOUNDER, CEO<br>
+              Big X</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <div class="service-head">
+        <p class="mts-small xtxt1">
+          WHAT WE'RE OFFERING
+        </p>
+        <p class="kolak xtxt1">
+          Services
+        </p>
+      </div>
+      <div class="service-body">
+        <div class="row">
+          <div class="col-md-3 mb-4 wow fadeInUp">
+            <!-- SERVICE BOX -->
+            <div class="service-box" style="background: url('assets/imgs/haircut.jpg')no-repeat center center/cover;">
+              <div class="service-box-img"></div>
+              <div class="overlay-text">
+                <div class="overlay-text-p">
+                  <div class="ov-head">
+                    <img src="assets/imgs/logo-icon.png" alt="" class="img-fluid" width="30">
+                    <p class="mts-small">Haircut</p>
+                    <div class="ov-text-bar"></div>
+                  </div>
+                  <div class="container">
+                    <p class="ov-text">
+                      Expert haircuts tailored to your style, ensuring precision and a fresh look
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-4 wow fadeInUp" data-wow-delay="0.2s">
+            <!-- SERVICE BOX -->
+            <div class="service-box" style="background: url('assets/imgs/dreadlocks2.jpg')no-repeat center center/cover;">
+              <div class="service-box-img"></div>
+              <div class="overlay-text">
+                <div class="overlay-text-p">
+                  <div class="ov-head">
+                    <img src="assets/imgs/logo-icon.png" alt="" class="img-fluid" width="30">
+                    <p class="mts-small">Dreadlocks</p>
+                    <div class="ov-text-bar"></div>
+                  </div>
+                  <div class="container">
+                    <p class="ov-text">
+                      Pro dreadlock styling and maintenance for a unique look to suit your personality
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-4 wow fadeInUp" data-wow-delay="0.3s">
+            <!-- SERVICE BOX -->
+            <div class="service-box" style="background: url('assets/imgs/pedicure.jpg')no-repeat center center/cover;">
+              <div class="service-box-img"></div>
+              <div class="overlay-text">
+                <div class="overlay-text-p">
+                  <div class="ov-head">
+                    <img src="assets/imgs/logo-icon.png" alt="" class="img-fluid" width="30">
+                    <p class="mts-small">Pedicure</p>
+                    <div class="ov-text-bar"></div>
+                  </div>
+                  <div class="container">
+                    <p class="ov-text">
+                      Pamper your feet with our pro services, ensuring beauty and relaxation
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-4 wow fadeInUp" data-wow-delay="0.4s">
+            <!-- SERVICE BOX -->
+            <div class="service-box" style="background: url('assets/imgs/manicure.jpg')no-repeat center center/cover;">
+              <div class="service-box-img"></div>
+              <div class="overlay-text">
+                <div class="overlay-text-p">
+                  <div class="ov-head">
+                    <img src="assets/imgs/logo-icon.png" alt="" class="img-fluid" width="30">
+                    <p class="mts-small">Manicure</p>
+                    <div class="ov-text-bar"></div>
+                  </div>
+                  <div class="container">
+                    <p class="ov-text">
+                      Indulge in our expert services for beautifully groomed and polished nails
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-4 wow fadeInUp">
+            <!-- SERVICE BOX -->
+            <div class="service-box" style="background: url('assets/imgs/braiding.jpg')no-repeat center center/cover;">
+              <div class="service-box-img"></div>
+              <div class="overlay-text">
+                <div class="overlay-text-p">
+                  <div class="ov-head">
+                    <img src="assets/imgs/logo-icon.png" alt="" class="img-fluid" width="30">
+                    <p class="mts-small">Braiding</p>
+                    <div class="ov-text-bar"></div>
+                  </div>
+                  <div class="container">
+                    <p class="ov-text">
+                      Creative and intricate braiding styles to enhance and protect your hair.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-4 wow fadeInUp" data-wow-delay="0.2s">
+            <!-- SERVICE BOX -->
+            <div class="service-box" style="background: url('assets/imgs/wigging.jpg')no-repeat center center/cover;">
+              <div class="service-box-img"></div>
+              <div class="overlay-text">
+                <div class="overlay-text-p">
+                  <div class="ov-head">
+                    <img src="assets/imgs/logo-icon.png" alt="" class="img-fluid" width="30">
+                    <p class="mts-small">Wigging</p>
+                    <div class="ov-text-bar"></div>
+                  </div>
+                  <div class="container">
+                    <p class="ov-text">
+                      Custom wig styling and fitting for a flawless, natural look that suits your style
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-4 wow fadeInUp" data-wow-delay="0.3s">
+            <!-- SERVICE BOX -->
+            <div class="service-box" style="background: url('assets/imgs/frontal.jpg')no-repeat center center/cover;">
+              <div class="service-box-img"></div>
+              <div class="overlay-text">
+                <div class="overlay-text-p">
+                  <div class="ov-head">
+                    <img src="assets/imgs/logo-icon.png" alt="" class="img-fluid" width="30">
+                    <p class="mts-small">Frontal Installation</p>
+                    <div class="ov-text-bar"></div>
+                  </div>
+                  <div class="container">
+                    <p class="ov-text">
+                      Seamless frontal installation for a natural-looking hairline and flawless finish
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-4 wow fadeInUp" data-wow-delay="0.4s">
+            <!-- SERVICE BOX -->
+            <div class="service-box" style="background: url('assets/imgs/nails.jpg')no-repeat center center/cover;">
+              <div class="service-box-img"></div>
+              <div class="overlay-text">
+                <div class="overlay-text-p">
+                  <div class="ov-head">
+                    <img src="assets/imgs/logo-icon.png" alt="" class="img-fluid" width="30">
+                    <p class="mts-small">Nails</p>
+                    <div class="ov-text-bar"></div>
+                  </div>
+                  <div class="container">
+                    <p class="ov-text">
+                      Expert nail care and design for perfectly polished and stunning nails
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="slideshow">
+    <div id="carouselExample" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <!-- <img src="..." class="d-block w-100" alt="..."> -->
+          <div class="s-show">
+            <div class="s-stars">
+              <i class="fa-solid fa-star wow fadeInUp"></i>
+              <i class="fa-solid fa-star wow fadeInUp" data-wow-delay="0.1s"></i>
+              <i class="fa-solid fa-star wow fadeInUp" data-wow-delay="0.15s"></i>
+              <i class="fa-solid fa-star wow fadeInUp" data-wow-delay="0.17s"></i>
+              <i class="fa-solid fa-star wow fadeInUp" data-wow-delay="0.19s"></i>
+            </div>
+            <p class="test-slides">
+              The services are peak. Everything you need is there
+            </p>
+            <div class="s-show-box">
+              <div class="s-show-img"></div>
+            </div>
+            <h3 class="mts-small text-white">
+              Satisfied customer
+            </h3>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="s-show">
+            <div class="s-stars">
+              <i class="fa-solid fa-star wow fadeInUp"></i>
+              <i class="fa-solid fa-star wow fadeInUp" data-wow-delay="0.1s"></i>
+              <i class="fa-solid fa-star wow fadeInUp" data-wow-delay="0.15s"></i>
+              <i class="fa-solid fa-star wow fadeInUp" data-wow-delay="0.17s"></i>
+              <i class="fa-solid fa-star wow fadeInUp" data-wow-delay="0.19s"></i>
+            </div>
+            <p class="test-slides">
+              I had to come back after the first haircut. They are very good with customers.
+            </p>
+            <div class="s-show-box">
+              <div class="s-show-img"></div>
+            </div>
+            <h3 class="mts-small text-white">
+              Satisfied customer
+            </h3>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="s-show">
+            <div class="s-stars">
+              <i class="fa-solid fa-star wow fadeInUp"></i>
+              <i class="fa-solid fa-star wow fadeInUp" data-wow-delay="0.1s"></i>
+              <i class="fa-solid fa-star wow fadeInUp" data-wow-delay="0.15s"></i>
+              <i class="fa-solid fa-star wow fadeInUp" data-wow-delay="0.17s"></i>
+              <i class="fa-solid fa-star wow fadeInUp" data-wow-delay="0.19s"></i>
+            </div>
+            <p class="test-slides">
+              Xparkling Touch has a really cool and friendly environment with experienced staff.
+            </p>
+            <div class="s-show-box">
+              <div class="s-show-img"></div>
+            </div>
+            <h3 class="mts-small text-white">
+              Satisfied customer
+            </h3>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="contact-body">
+        <div class="contact-left">
+          <div class="contact-stars">
+            <i class="fa-solid fa-star wow fadeInUp"></i>
+            <i class="fa-solid fa-star wow fadeInUp" data-wow-delay="0.1s"></i>
+            <i class="fa-solid fa-star wow fadeInUp" data-wow-delay="0.15s"></i>
+            <i class="fa-solid fa-star wow fadeInUp" data-wow-delay="0.17s"></i>
+            <i class="fa-solid fa-star wow fadeInUp" data-wow-delay="0.19s"></i>
+          </div>
+          <p class="kolak wow fadeInUp">
+            We are best salon around. <br>
+            Contact us today.
+          </p>
+          <div class="row icn wow fadeInLeft">
+            <div class="col-1 main-icn">
+              <i class="fa-solid fa-phone"></i>
+            </div>
+            <div class="col-11">
+              <h3 class="mts-small fw-bold mb-0" style="font-size: 0.8em;">CALL US</h3>
+              <p class="mts-small main-icn-1">
+                <a href="tel:+2349035458488">+234 903 545 8488</a>
+              </p>
+            </div>
+          </div>
+          <div class="row icn wow fadeInLeft" data-wow-delay="0.1s">
+            <div class="col-1 main-icn">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="col-11">
+              <h3 class="mts-small fw-bold mb-0" style="font-size: 0.8em;">EMAIL</h3>
+              <p class="mts-small main-icn-1">
+                <a href="mailto:info@xparklingtouch.com">info@xparklingtouch.com</a>
+              </p>
+            </div>
+          </div>
+          <!-- IG & TIKTOK -->
+          <div class="row wow fadeInLeft" data-wow-delay="0.1s">
+            <div class="col-1 sec-icn">
+              <i class="fa-brands fa-instagram"></i> <br>
+              <i class="fa-brands fa-tiktok"></i>
+            </div>
+            <div class="col-11 fw-bold">
+              <a href="https://instagram.com/xparkling_touch">@xparkling_touch</a> <br>
+              <a href="https://tiktok.com/@xparkling_touch">@xparkling_touch</a>
+            </div>
+          </div>
+        </div>
+        <div class="contact-right" id="send-message">
+          <div class="contact-form wow fadeInRight">
+            <h3 class="mts-small xtxt1">
+              SEND US A MESSAGE
+            </h3>
+            <form action="" method="post">
+              <div class="row mb-4">
+                <?php
+                  if (isset($_SESSION['message'])) {
+                      echo '<div class="alert ' . $_SESSION['type'] . '">' . $_SESSION['message'] . '</div>';
+                      unset($_SESSION['message']);
+                      unset($_SESSION['type']);
+                  }
+                ?>
+                <div class="col-6">
+                    <div class="form-group">
+                        <input type="text" name="name" id="name" placeholder="Name" value="<?php echo $name; ?>">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="form-group">
+                        <input type="number" name="phone" id="phone" placeholder="Phone Number" value="<?php echo $phone; ?>">
+                    </div>
+                </div>
+              </div>
+              <div class="form-group mb-4">
+                  <input type="email" name="email" id="email" placeholder="Email" value="<?php echo $email; ?>">
+              </div>
+              <div class="form-group mb-4">
+                  <textarea name="message" id="message" cols="30" rows="6" placeholder="Your message"><?php echo $message; ?></textarea>
+              </div>
+              <div class="form-group mb-4">
+                  <button class="submit-btn mts-small" type="submit" name="sendMessage">SUBMIT</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <h3 class="footer-headers kolak">
+            Contact
+          </h3>
+          <p class="footer-detail">
+            Xparkling Touch Unisex Salon, <br>
+            120 Irhirhi Road, Off Airport Road, <br>
+            Benin City, Nigeria.
+          </p>
+          <p class="footer-no mts-small mb-4">
+            +234 903 545 8488
+          </p>
+          <div class="footer-email">
+            <p class="">
+              info@xparklingtouch.com
+            </p>
+          </div>
+          <div class="footer-icons">
+            <a href="https://instagram.com/xparkling_touch">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://tiktok.com/@xparkling_touch">
+              <i class="fa-brands fa-tiktok"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <h3 class="footer-headers kolak">
+            Work Time
+          </h3>
+          <div class="work-time">
+            <div class="wt">
+              <p>Monday</p>
+              <div class="wt-dash"></div>
+              <p>08:00 - 20:00</p>
+            </div>
+            <div class="wt">
+              <p>Tuesday</p>
+              <div class="wt-dash"></div>
+              <p>08:00 - 20:00</p>
+            </div>
+            <div class="wt">
+              <p>Wednesday</p>
+              <div class="wt-dash"></div>
+              <p>08:00 - 20:00</p>
+            </div>
+            <div class="wt">
+              <p>Thursday</p>
+              <div class="wt-dash"></div>
+              <p>08:00 - 20:00</p>
+            </div>
+            <div class="wt">
+              <p>Friday</p>
+              <div class="wt-dash"></div>
+              <p>08:00 - 20:00</p>
+            </div>
+            <div class="wt">
+              <p>Saturday</p>
+              <div class="wt-dash"></div>
+              <p>10:00 - 20:00</p>
+            </div>
+            <div class="wt">
+              <p>Sunday</p>
+              <div class="wt-dash"></div>
+              <p>Closed</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-3 col-sm-4 mb-4">
+          <h3 class="footer-headers kolak">
+            Book an appointment
+          </h3>
+          <p class="footer-detail">
+            Whether you're looking for a fresh cut or a bold new look, Xparkling Touch has you covered.
+          </p>
+          <div class="book">
+            <a href="book-an-appointment/" class="footer-btn mts-small">
+              BOOK AN APPOINTMENT
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <hr class="footer-line">
+    <div class="last-footer">
+      <div class="container">
+        <div class="last-footer-inner">
+          &copy; 2024 &vert; Designed by <a class="iRobbott" href="https://iconicrobbott.com">iRobbott 🤖</a>
+        </div>
+      </div>
+    </div> -->
+  </footer>
+
+  <!-- ANIMATE -->
+  <script src="assets/js/wow.min.js"></script>
+  <script>
+    new WOW().init();
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

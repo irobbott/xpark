@@ -1,0 +1,108 @@
+/* KOLAK FONT */
+@import url('https://fonts.cdnfonts.com/css/kolak');
+
+/* GENERAL STYLING */
+body {
+    font-family: "Montserrat", sans-serif;
+    color: #222;
+}
+
+.kolaq {
+    font-family: 'Kolak';
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.xbtn {
+    background: #fff;
+    color:  #d6ad43;
+    padding: 10px 8px;
+    border: none;
+    transition: all 0.4s;
+}
+
+.xbtn:hover {
+    background: #755e24;
+    color: #fff;
+    transition: all 0.4s;
+}
+
+.xbtn2 {
+    background: #d6ad43;
+    color:  #fff;
+    padding: 10px 8px;
+    border: none;
+    transition: all 0.4s;
+}
+
+.xbtn2:hover {
+    background: #755e24;
+    transition: all 0.4s;
+}
+
+/* HEADER */
+header {
+    width: 100%;
+    height: 100vh;
+    background: url('../imgs/header-img.JPG')no-repeat center center/cover;
+    background-attachment: fixed;
+}
+
+/* NAVBAR */
+nav {
+    /* width: 90%; */
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    border-bottom: 0.5px solid #ffffff56;
+}
+
+nav .xlogo img {
+    width: 150px;
+}
+
+nav .navlinks a {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+nav .navlinks {
+    display: flex;
+    align-items: center;
+}
+
+nav .navlinks li {
+    margin: 0 20px;
+}
+
+nav .navlinks .xbutton {
+    background: #d6ad43;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+}
+
+nav .navlinks .xbutton:hover {
+    background: #fff;
+    color: #d6ad43;
+    transition: all 0.4s;
+}
+
+nav .navlinks .xbutton .fa-solid {
+    font-size: 1.3rem;
+}
+
+@media (min-width: 700px) {
+    nav .navlinks .xbutton {
+        display: none;
+    }
+}
